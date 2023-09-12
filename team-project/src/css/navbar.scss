@@ -1,0 +1,133 @@
+/* Desktop devices */
+@media (min-aspect-ratio: 16/9) {
+}
+
+/* Tablet devices */
+@media (max-aspect-ratio: 16/9) {
+    .cover-navbar {
+
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        height: calc(56 * var(--medium));
+    }
+
+    div.navbar {
+        position: absolute;
+        z-index: 100;
+        width: 100vw;
+        height: calc(56 * var(--medium));
+        background: #FFFFFF;
+        border-bottom: 1px solid #F5F5F5;
+    }
+
+    div.navbar-wrapper {
+        width: calc(1312 * var(--medium));
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    a.navbar-logo {
+        width: calc(96 * var(--medium));
+        height: calc(24 * var(--medium));
+        background: url(../assets/logo-black.svg) no-repeat center;
+        background-size: cover;
+        margin: auto auto auto 0;
+    }
+
+    button#navbar-search {
+        width: calc(24 * var(--medium));
+        height: calc(24 * var(--medium));
+        display: grid;
+        place-content: center;
+        color: #1C1B1F;
+        font-size: calc(24 * var(--medium));
+        background: none;
+        outline: 0;
+        border: 0;
+        margin: auto calc(32 * var(--medium)) auto 0;
+        cursor: pointer;
+    }
+
+    button#navbar-user {
+        width: calc(24 * var(--medium));
+        height: calc(24 * var(--medium));
+        border-radius: calc(12 * var(--medium));
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        background: url(../assets/user-icon-black.svg) no-repeat center;
+        background-size: cover;
+    }
+
+    button#navbar-user:hover {
+        box-shadow: 0 0 0 3px #9DCBFF;
+    }
+
+    // Navbar Menu
+    div.search-menu-active {
+        position: relative;
+        z-index: 80;
+        width: 100vw;
+        height: 100vh;
+        -webkit-backdrop-filter: blur(32px);
+        backdrop-filter: blur(16px);
+        background-color: rgba(160, 160, 160, 0.1);
+
+        transform: translateY(0);
+        transition: 0.3s;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    div.search-menu-no-active {
+        position: relative;
+        z-index: 80;
+        width: 100vw;
+        height: 100vh;
+        -webkit-backdrop-filter: blur(32px);
+        backdrop-filter: blur(16px);
+        background-color: rgba(160, 160, 160, 0.1);
+        transform: translateY(-120vh);
+        transition: 0.1s;
+    }
+
+    form.menu-section {
+        width: 100%;
+        height: 30vh;
+        background: #FFFFFF;
+        display: flex;
+        transition: 0.8s;
+        transform: translateY(-30vh);
+    }
+
+    div.search-menu-active form.menu-section {
+        width: 100%;
+        height: 30vh;
+        background: #FFFFFF;
+        display: flex;
+        transition-delay: 100ms;
+        transform: translateY(0);
+    }
+
+
+    input.navbar-search {
+        width: calc(1312 * var(--medium));
+        height: calc(48 * var(--medium));
+        margin: calc(80 * var(--medium)) auto 0 auto;
+        background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+        text-indent: calc(48 * var(--medium));
+        font: 500 calc(24 * var(--big)) 'IBM Plex Sans Thai';
+        border: 0;
+        outline: 0;
+    }
+
+    div.no-menu-section {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {}
